@@ -204,6 +204,7 @@ minetest.register_on_player_receive_fields(function(sender, formname, fields)
 					pinv:add_item("customer_gets",item)
 				end
 				minetest.chat_send_player(name,S("Exchanged!"))
+				minetest.log("action", " [Currency_Shop]   "..name.." was shopping at "..minetest.pos_to_string(pos))
 			else
 				if owners_fault then
 					minetest.chat_send_player(name,S("Exchange can not be done, contact the shop owner."))
