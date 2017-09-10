@@ -27,6 +27,7 @@ local check_cheat = function(cheater,action)
 	local name = cheater:get_player_name()
 	local pos = cheater:getpos()
 	local back = false
+	if cheater.is_fake_player then return true end                     -- only real player can earn something
 	if pos ~= nil then
 
 		pos.y=pos.y+1.5
