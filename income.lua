@@ -42,7 +42,7 @@ local check_cheat = function(cheater,action)
 		  if action then
 			players_income[name] = players_income[name] + 1    
 		  else
-			players_income[name] = players_income[name] + 1.5    -- placing a node is counted 0.5 more than digging a node
+			players_income[name] = players_income[name] + 10    -- placing a node is counted 10 times more than digging a node
 		  end		
 				
 		end	
