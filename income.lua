@@ -78,6 +78,7 @@ earn_income = function(player,action)
     if payday[name] == nil then payday[name] = 0 end
     if payday[name] > 0 then
         count = math.floor(1.5+(players_income[name]/faktor)) 
+	if count < 1 then count = 1
         local inv = player:get_inventory()
         inv:add_item("main", {name="currency:minegeld_5", count=count})
 	minetest.chat_send_player(name,"  --- PAYDAY --- you recieved "..count.." Bluenotes")
